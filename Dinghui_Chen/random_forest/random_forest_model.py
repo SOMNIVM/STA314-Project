@@ -21,11 +21,23 @@ pd.set_option('display.max_columns', None)
 file = pd.read_csv('C:/Users/17764/PycharmProjects/STA314-Project/train.csv')
 
 # We checked the scatter plot and found that the correlations between the predictors
-# which are Diagnosis and DectorInCharge and the results are near zero. So we decided to drop them.
+# , and we decided to drop the numerical variables with low correlation with the results.
+
 X = file.drop(columns=['PatientID', 'Age', 'BMI', 'AlcoholConsumption', 'PhysicalActivity',
                      'DietQuality', 'FamilyHistoryAlzheimers', 'CardiovascularDisease', 'Diagnosis',
                      'SystolicBP', 'DiastolicBP', 'CholesterolTotal', 'CholesterolLDL',
                      'CholesterolHDL', 'CholesterolTriglycerides', 'DoctorInCharge'])
+
+# Below is a 7-variable version
+# X = file.drop(columns=['PatientID', 'Age', 'Gender', 'Ethnicity', 'EducationLevel', 'BMI',
+#                        'Smoking', 'AlcoholConsumption', 'PhysicalActivity','DietQuality',
+#                        'FamilyHistoryAlzheimers', 'CardiovascularDisease', 'Depression',
+#                        'HeadInjury', 'Hypertension', 'Diagnosis', 'SystolicBP', 'DiastolicBP',
+#                        'CholesterolTotal', 'CholesterolLDL', 'CholesterolHDL',
+#                        'CholesterolTriglycerides', 'MemoryComplaints', 'Confusion',
+#                        'Disorientation', 'PersonalityChanges', 'DifficultyCompletingTasks',
+#                        'Forgetfulness', 'DoctorInCharge'])
+
 y = file['Diagnosis']
 
 # Random forest:
@@ -41,14 +53,19 @@ param_grid = {
 rf = RandomForestClassifier()
 
 # Set up GridSearchCV with 10-fold cross-validation
-grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=10, scoring='accuracy', n_jobs=-1)
+grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=20, scoring='accuracy', n_jobs=-1)
 
 # Perform the grid search to find the best model
 grid_search.fit(X, y)
 
-# Get the model with the best cross-validation score
+# Get the model with the best cross-validation score and print the best score
 best_rf = grid_search.best_estimator_
+print(f"Best cross-validation accuracy score: {grid_search.best_score_:.4f}")
+# For 10-folds CV
+# Best cross-validation accuracy score: 0.9555
 
+# For 20-folds CV
+# Best cross-validation accuracy score: 0.9568
 best_rf.fit(X, y)
 
 

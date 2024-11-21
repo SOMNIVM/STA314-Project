@@ -12,7 +12,7 @@ patient_ids = X_test['PatientID']
 X_test = X_test.drop(columns=['PatientID', 'Age', 'BMI', 'AlcoholConsumption', 'PhysicalActivity',
                      'DietQuality', 'FamilyHistoryAlzheimers', 'CardiovascularDisease', 'Diagnosis',
                      'SystolicBP', 'DiastolicBP', 'CholesterolTotal', 'CholesterolLDL',
-                     'CholesterolHDL', 'CholesterolTriglycerides', 'DoctorInCharge'], errors='ignore')
+                     'CholesterolHDL', 'CholesterolTriglycerides', 'DoctorInCharge'])
 
 print("Test dataset size:", X_test.shape)
 
