@@ -23,7 +23,7 @@ file = pd.read_csv('C:/Users/17764/PycharmProjects/STA314-Project/train.csv')
 # We checked the scatter plot and found that the correlations between the predictors
 # , and we decided to drop the numerical variables with low correlation with the results.
 
-X = file.drop(columns=['PatientID', 'Age', 'BMI', 'AlcoholConsumption', 'PhysicalActivity',
+X = file.drop(columns=['PatientID', 'Age', 'Smoking', 'Depression', 'HeadInjury', 'Confusion', 'Disorientation', 'DifficultyCompletingTasks', 'BMI', 'AlcoholConsumption', 'PhysicalActivity',
                      'DietQuality', 'FamilyHistoryAlzheimers', 'CardiovascularDisease', 'Diagnosis',
                      'SystolicBP', 'DiastolicBP', 'CholesterolTotal', 'CholesterolLDL',
                      'CholesterolHDL', 'CholesterolTriglycerides', 'DoctorInCharge'])
