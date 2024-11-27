@@ -6,9 +6,10 @@
 - The last one is the extension of decision tree. Therefore we also include it after self-studying.
 
 # Feature Selection
-- We observed the correlation scatterplot of all the numerical variables 
-- The selected numerical variables sleep quality, MMSE, Functional Assessment, and ADL.
-- The categorical variable 
+- We first did some early data analysis, including the scatter plot in the file EDA_Dinghui_Chen.py
+- We observed the correlation scatterplot of all the numerical and categorical variables 
+- The selected numerical variables based on the correlation are sleep quality, MMSE, Functional Assessment, and ADL.
+- We select categorical variables based on previous researches.
 
 
 # Analysis:
