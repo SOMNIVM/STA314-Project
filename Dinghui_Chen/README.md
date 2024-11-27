@@ -19,6 +19,9 @@
 - Decision Tree: 0.9521
 - Random Forest: 0.9555
 
+## For the models with regularization feature selection:
+Logistic Regression: 0.8398
+
 # Appendix
 ## For the 7 variables models:
 we dropped: 

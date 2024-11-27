@@ -9,10 +9,9 @@ best_rf = joblib.load('../random_forest/best_random_forest_model.joblib')
 X_test = pd.read_csv('C:/Users/17764/PycharmProjects/STA314-Project/test.csv')
 
 patient_ids = X_test['PatientID']
-X_test = X_test.drop(columns=['PatientID', 'Age', 'BMI', 'AlcoholConsumption', 'PhysicalActivity',
-                     'DietQuality', 'FamilyHistoryAlzheimers', 'CardiovascularDisease', 'Diagnosis',
-                     'SystolicBP', 'DiastolicBP', 'CholesterolTotal', 'CholesterolLDL',
-                     'CholesterolHDL', 'CholesterolTriglycerides', 'DoctorInCharge'])
+X_test = X_test.drop(columns=['PatientID', 'Age', 'Smoking', 'AlcoholConsumption', 'PhysicalActivity', 'Depression', 'HeadInjury', 'Confusion', 'Disorientation', 'DifficultyCompletingTasks', 'BMI', 'AlcoholConsumption', 'PhysicalActivity',
+                     'DietQuality', 'FamilyHistoryAlzheimers',
+                     'SystolicBP', 'DiastolicBP', 'CholesterolTotal', 'CholesterolLDL', 'DifficultyCompletingTasks', 'DoctorInCharge'])
 
 print("Test dataset size:", X_test.shape)
 

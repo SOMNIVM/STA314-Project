@@ -1,0 +1,89 @@
+For top 10 features:
+C:\Users\17764\AppData\Local\Programs\Python\Python311\python.exe C:\Users\17764\PycharmProjects\STA314-Project\Dinghui_Chen\random_forest\random_forest_model_with_Gini_importance.py
+Best cross-validation accuracy with all features: 0.9475
+Best parameters with all features: {'criterion': 'gini', 'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100}
+
+Feature Importance (Gini):
+                      Feature  Importance
+23       FunctionalAssessment    0.214053
+26                        ADL    0.177662
+22                       MMSE    0.134219
+24           MemoryComplaints    0.087385
+25         BehavioralProblems    0.060379
+21   CholesterolTriglycerides    0.028728
+7            PhysicalActivity    0.027027
+9                SleepQuality    0.026899
+4                         BMI    0.026373
+18           CholesterolTotal    0.025079
+8                 DietQuality    0.024870
+6          AlcoholConsumption    0.023831
+20             CholesterolHDL    0.022363
+19             CholesterolLDL    0.021999
+16                 SystolicBP    0.021060
+17                DiastolicBP    0.019562
+0                         Age    0.018283
+3              EducationLevel    0.005514
+2                   Ethnicity    0.005055
+11      CardiovascularDisease    0.003036
+15               Hypertension    0.002921
+14                 HeadInjury    0.002740
+12                   Diabetes    0.002624
+10    FamilyHistoryAlzheimers    0.002508
+27                  Confusion    0.002370
+31              Forgetfulness    0.002339
+5                     Smoking    0.002021
+28             Disorientation    0.001966
+30  DifficultyCompletingTasks    0.001947
+1                      Gender    0.001943
+13                 Depression    0.001717
+29         PersonalityChanges    0.001524
+
+Best cross-validation accuracy with selected features: 0.9594
+Best parameters with selected features: {'criterion': 'gini', 'max_depth': 30, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 200}
+
+Process finished with exit code 0
+
+For top 17 features
+C:\Users\17764\AppData\Local\Programs\Python\Python311\python.exe C:\Users\17764\PycharmProjects\STA314-Project\Dinghui_Chen\random_forest\random_forest_model_with_Gini_importance.py
+Best cross-validation accuracy with all features: 0.9455
+Best parameters with all features: {'criterion': 'entropy', 'max_depth': 20, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 200}
+
+Feature Importance (Gini):
+                      Feature  Importance
+23       FunctionalAssessment    0.181241
+26                        ADL    0.158995
+22                       MMSE    0.132871
+24           MemoryComplaints    0.080614
+25         BehavioralProblems    0.056216
+9                SleepQuality    0.032294
+21   CholesterolTriglycerides    0.031460
+20             CholesterolHDL    0.029846
+7            PhysicalActivity    0.029174
+8                 DietQuality    0.028995
+18           CholesterolTotal    0.028954
+4                         BMI    0.028787
+6          AlcoholConsumption    0.027746
+19             CholesterolLDL    0.026223
+16                 SystolicBP    0.025942
+0                         Age    0.024013
+17                DiastolicBP    0.022218
+3              EducationLevel    0.009568
+2                   Ethnicity    0.007240
+31              Forgetfulness    0.004342
+1                      Gender    0.004204
+5                     Smoking    0.003693
+13                 Depression    0.002981
+27                  Confusion    0.002916
+10    FamilyHistoryAlzheimers    0.002898
+12                   Diabetes    0.002846
+15               Hypertension    0.002651
+11      CardiovascularDisease    0.002502
+29         PersonalityChanges    0.002402
+30  DifficultyCompletingTasks    0.002205
+28             Disorientation    0.002022
+14                 HeadInjury    0.001939
+
+Best cross-validation accuracy with selected features: 0.9561
+Best parameters with selected features: {'criterion': 'entropy', 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 200}
+
+Process finished with exit code 0

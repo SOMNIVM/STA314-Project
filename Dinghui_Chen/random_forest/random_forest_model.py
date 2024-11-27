@@ -23,10 +23,11 @@ file = pd.read_csv('C:/Users/17764/PycharmProjects/STA314-Project/train.csv')
 # We checked the scatter plot and found that the correlations between the predictors
 # , and we decided to drop the numerical variables with low correlation with the results.
 
-X = file.drop(columns=['PatientID', 'Age', 'BMI', 'AlcoholConsumption', 'PhysicalActivity',
-                     'DietQuality', 'FamilyHistoryAlzheimers', 'CardiovascularDisease', 'Diagnosis',
-                     'SystolicBP', 'DiastolicBP', 'CholesterolTotal', 'CholesterolLDL',
-                     'CholesterolHDL', 'CholesterolTriglycerides', 'DoctorInCharge'])
+# X = file.drop(columns=['PatientID', 'Age', 'BMI', 'AlcoholConsumption', 'PhysicalActivity',
+#                      'DietQuality', 'FamilyHistoryAlzheimers', 'CardiovascularDisease', 'Diagnosis',
+#                      'SystolicBP', 'DiastolicBP', 'CholesterolTotal', 'CholesterolLDL',
+#                      'CholesterolHDL', 'CholesterolTriglycerides', 'DoctorInCharge'])
+
 
 # Below is a 7-variable version
 # X = file.drop(columns=['PatientID', 'Age', 'Gender', 'Ethnicity', 'EducationLevel', 'BMI',
@@ -53,7 +54,7 @@ param_grid = {
 rf = RandomForestClassifier()
 
 # Set up GridSearchCV with 10-fold cross-validation
-grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=20, scoring='accuracy', n_jobs=-1)
+grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=25, scoring='accuracy', n_jobs=-1)
 
 # Perform the grid search to find the best model
 grid_search.fit(X, y)
