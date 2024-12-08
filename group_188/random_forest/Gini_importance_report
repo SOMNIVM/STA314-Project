@@ -87,3 +87,5 @@ Best cross-validation accuracy with selected features: 0.9561
 Best parameters with selected features: {'criterion': 'entropy', 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 200}
 
 Process finished with exit code 0
+
+17 Variables
